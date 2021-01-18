@@ -11,7 +11,7 @@ class AdaptiveNorm2d(nn.Module):
         if 'in' in norm_layer:
             self.norm_layer = nn.InstanceNorm2d(num_features, eps=eps, affine=False)
         elif 'bn' in norm_layer:
-            self.norm_layer = SyncBatchNorm(num_features, momentum=1.0, eps=eps, affine=False)
+            self.norm_layer = nn.SyncBatchNorm(num_features, momentum=1.0, eps=eps, affine=False)
 
         self.delete_weight_on_forward = True
 

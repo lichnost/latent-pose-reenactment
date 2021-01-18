@@ -33,21 +33,21 @@
 set -e
 
 # Please use an ABSOLUTE path here!
-DATASET_ROOT="/Vol1/dbstore/datasets/violet/VoxCeleb2_test_finetuning"
+DATASET_ROOT="/home/lichnost/programming/work/ml/head/latent-pose/dataset"
 
 # echo "Unnamed: 0,path" > $dataset_dir/split.csv
 
 # Initialize `IDENTITIES` -- the list of folders (paths relative to $DATASET_ROOT/images
 # or $DATASET_ROOT/videos), each containing raw images or one video of some person.
-cd "$DATASET_ROOT/images" # or e.g. `"$DATASET_ROOT/videos"`
+cd "$DATASET_ROOT/videos" # or e.g. `"$DATASET_ROOT/videos"`
 IDENTITIES=(*) # or `(*/*)`, or whatever else
 cd -
 
 # Alternatively, you can specify them manually, e.g.:
-# IDENTITIES=(
-#     "monalisa"
-#     "id00017/5MkXgwdrmJw"
-# )
+IDENTITIES=(
+    "AriDan"
+    "PavelSemenov"
+)
 
 # Specify the range (segment) of identities to process. Useful for parallelizing.
 FIRST_IDX=${1:-0}
@@ -57,7 +57,7 @@ echo "Got ${#IDENTITIES[@]} folders, will process from ${FIRST_IDX}-th to ${LAST
 
 # Switch off (set to `false` or comment out) unnecessary operations
 DO_DECODE_VIDEOS=\
-false
+true
 
 DO_CROP=\
 true

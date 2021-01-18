@@ -6,18 +6,19 @@ Setup
 Guaranteed to work on Ubuntu 16.04 with Python 3.7+, CUDA 10.1 and also:
 
 ```bash
-pip3 install \
+pip install \
     torch==1.5.1 \
     torchvision==0.6.1
 
-pip3 install \
+pip install \
     tensorboard==2.2.2 \
     pandas==1.0.5 \
     torchsummary==1.5.1 \
     thop==0.0.31-2005241907 \
     tqdm==4.47.0 \
     scipy==1.5.1 \
-    opencv-python==4.3.0.36 \
+    opencv-python \
+    opencv-contrib-python \
     imageio==2.9.0 \
     imageio-ffmpeg==0.4.2 \
     pymemcache==3.2.0 \
@@ -35,9 +36,10 @@ pip3 install \
     mxnet-cu101mkl==1.6.0.post0 \
     scikit-learn==0.23.2
 
-pip3 install git+https://github.com/DmitryUlyanov/yamlenv.git
-pip3 install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
-pip3 install git+https://github.com/dniku/insightface.git@763060b2
+pip install git+https://github.com/DmitryUlyanov/yamlenv.git
+pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
+pip install git+https://github.com/dniku/insightface.git@763060b2
+pip install pyfakewebcam
 ```
 
 ## Repository

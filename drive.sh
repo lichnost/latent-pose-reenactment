@@ -1,0 +1,1 @@
+python drive.py --images_paths PavelSemenov/ --destination /home/lichnost/programming/work/ml/head/latent-pose/output /home/lichnost/programming/work/ml/head/latent-pose/latent-pose/outputs/AriDan_1/checkpoints/model_02714706.pth /home/lichnost/programming/work/ml/head/latent-pose/dataset
